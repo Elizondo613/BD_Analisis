@@ -8,6 +8,7 @@ exports.createProveedor = async (req, res) => {
     res.status(201).json({ message: 'Proveedor creado correctamente', proveedor: nuevoProveedor });
   } catch (error) {
     res.status(500).json({ error: 'Error al crear el proveedor' });
+    console.log(error);
   }
 };
 

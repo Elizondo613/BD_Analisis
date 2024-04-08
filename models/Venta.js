@@ -2,6 +2,11 @@ const mongoose = require('mongoose');
 const Inventario = require('./Inventario');
 
 const ventaSchema = new mongoose.Schema({
+  cliente: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'Cliente',
+    required: true
+  },
   producto: { 
     type: mongoose.Schema.Types.ObjectId,
     ref: 'Inventario',

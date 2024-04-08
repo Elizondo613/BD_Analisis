@@ -1,0 +1,30 @@
+###
+POST http://localhost:4000/cliente/clientes HTTP/1.1
+Content-Type: application/json
+
+{
+    "nombre": "s",
+    "apellido": "s",
+    "dpi": 1,
+    "nit": 1
+}
+
+###
+GET http://localhost:4000/cliente/clientes HTTP/1.1
+
+###
+GET http://localhost:4000/cliente/clientes/661196df70e5be8450810d98 HTTP/1.1
+
+###
+PUT http://localhost:4000/cliente/clientes/ HTTP/1.1
+Content-Type: application/json
+
+{
+    "nombre": "",
+    "apellido": "",
+    "dpi": 0,
+    "nit": 0
+}
+
+###
+DELETE http://localhost:4000/cliente/clientes/661196df70e5be8450810d98 HTTP/1.1
