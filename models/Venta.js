@@ -36,13 +36,15 @@ ventaSchema.pre('save', async function(next) {
     }
 
     // Verificar si hay suficiente stock para la venta
-    if (productoInventario.stock < this.cantidad) {
+    else if (productoInventario.stock < this.cantidad) {
       throw new Error('Stock insuficiente para completar la venta');
     }
 
     // Actualizar el stock del producto en el inventario
-    productoInventario.stock -= this.cantidad;
-    await productoInventario.save();
+    else{
+      productoInventario.stock -= this.cantidad;
+      await productoInventario.save();
+    }
 
     next();
   } catch (error) {

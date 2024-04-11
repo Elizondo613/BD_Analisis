@@ -3,14 +3,14 @@ POST http://localhost:4000/proveedor/proveedores HTTP/1.1
 Content-Type: application/json
 
 {
-    "nombre": "",
-    "apellido": "",
-    "codigo": 0,
-    "nit": 0,
-    "departamento": "",
-    "municipio": "",
-    "correo": "",
-    "telefono": 0 
+    "nombre": "aaa",
+    "apellido": "bbb",
+    "codigo": 1,
+    "nit": 1,
+    "departamento": "ccc",
+    "municipio": "ddd",
+    "correo": "eee",
+    "telefono": 1 
 }
 
 ###
@@ -35,4 +35,4 @@ Content-Type: application/json
 }
 
 ###
-DELETE http://localhost:4000/proveedor/proveedores/661196df70e5be8450810d98 HTTP/1.1
+DELETE http://localhost:4000/proveedor/proveedores/6611bc07c5ff930a23e461b6 HTTP/1.1

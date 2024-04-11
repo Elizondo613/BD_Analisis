@@ -21,10 +21,6 @@ exports.createVenta = async (req, res) => {
         return res.status(400).json({ error: 'No hay suficiente stock para realizar la venta' });
       }
   
-      // Actualizar el stock en el inventario
-      productoInventario.stock -= cantidadVendida;
-      await productoInventario.save();
-  
       res.status(201).json({ message: 'Venta creada correctamente', venta: nuevaVenta });
     } catch (error) {
       res.status(500).json({ error: 'Error al crear la venta' });

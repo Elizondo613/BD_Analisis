@@ -3,10 +3,10 @@ const router = express.Router();
 const compraController = require('../controllers/compraController');
 
 // Rutas CRUD para Compras
-router.post('/', compraController.createCompra);
-router.get('/', compraController.getAllCompras);
-router.get('/:id', compraController.getCompraById);
-router.put('/:id', compraController.updateCompraById);
-router.delete('/:id', compraController.deleteCompraById);
+router.post('/compra', compraController.createCompra);
+router.get('/compra', compraController.getAllCompras);
+router.get('/compra/:id', compraController.getCompraById);
+router.put('/compra/:id', compraController.updateCompraById);
+router.delete('/compra/:id', compraController.deleteCompraById);
 
 module.exports = router;
