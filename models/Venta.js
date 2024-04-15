@@ -12,18 +12,9 @@ const ventaSchema = new mongoose.Schema({
     ref: 'Inventario',
     required: true 
   },
-  cantidad: { 
-    type: Number, 
-    required: true 
-  },
-  precioUnitario: { 
-    type: Number, 
-    required: true 
-  },
-  total: { 
-    type: Number, 
-    required: true 
-  }
+  cantidad: { type: Number, required: true },
+  precioUnitario: { type: Number, required: true },
+  total: { type: Number, required: true }
 });
 
 ventaSchema.pre('save', async function(next) {
